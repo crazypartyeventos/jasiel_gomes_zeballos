@@ -1,4 +1,7 @@
+@import "tailwindcss";
 :root {
+  --font-michroma: var(--font-michroma);
+  --font-orbitron: var(--font-orbitron);
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -19,10 +22,11 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-michroma); /* ✅ Ahora usa la variable de Next Font */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 
 * {
   box-sizing: border-box;
@@ -39,4 +43,36 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+/*Brillitoa*/
+.sparkle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: rgb(224, 247, 22);
+  border-radius: 50%;
+  opacity: 0.7;
+  animation: sparkle 3s infinite ease-in-out;
+}
+
+@keyframes sparkle {
+  0% { transform: scale(0); opacity: 0; }
+  50% { transform: scale(1.5); opacity: 1; }
+  100% { transform: scale(0); opacity: 0; }
+}
+
+h1, h2, h3 {
+  font-family: var(--font-orbitron);
+  font-weight: 900;
+  color: #96d2f5;
+}
+
+@keyframes shake {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+
+.animate-shake {
+  animation: shake 2s ease-in-out infinite;
 }

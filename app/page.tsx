@@ -1,66 +1,51 @@
+"use client";
+import { useState } from "react";
 import Image from "next/image";
-import styles from "./page.module.css";
+import Background from "./components/background";
+import PhotoCard from "./components/photocard";
+import InviteText from "./components/inviteText";
+import MusicPlayer from "./components/musicPlayer";
+import Footer from "./components/footer";
+
+// Define aquí la imagen de la carta (puedes cambiar la ruta)
+import sobreImage from "../public/images/sobre.png";
 
 export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+  const [abierto, setAbierto] = useState(false);
+
+ return (
+    <div className={`w-screen h-screen flex items-center justify-center ${
+      abierto ? "bg-transparent" : "bg-purple-100"
+    }`}>
+      {!abierto ? (
+        // Pantalla inicial con la carta
+        <div
+          className="cursor-pointer transform hover:scale-105 transition-transform"
+          onClick={() => setAbierto(true)}
+        >
+          <Image src={sobreImage} alt="Abrir Invitación" width={200} height={200} className="animate-shake"/>
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      ) : (
+        <div className="relative flex flex-col min-h-screen w-full">
+          {/* Fondo fijo detrás de todo */}
+          <Background />
+
+          {/* CONTENIDO */}
+          <div className="relative z-10 flex flex-col items-center w-full">
+            <section className="flex flex-col items-center justify-center h-screen px-4 text-center">
+              <InviteText />
+              <MusicPlayer />
+            </section>
+
+            <section className="flex flex-col md:flex-row items-center justify-center gap-8 py-20 px-4">
+              <PhotoCard image="/images/jasiel1.jpeg" borderColor="#aa48b8" />
+              <PhotoCard image="/images/jasiel2.jpeg" borderColor="#7f53b3" />
+            </section>
+
+            <Footer />
+          </div>
         </div>
-      </main>
+      )}
     </div>
   );
 }
