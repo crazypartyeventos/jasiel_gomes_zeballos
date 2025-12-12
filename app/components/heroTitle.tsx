@@ -1,8 +1,11 @@
 export default function HeroTitle() {
   return (
-    <div className="relative text-center text-white z-10">
-      <h1 className="text-5xl font-bold">MARÍA FERNANDA</h1>
-      <p className="text-xl mt-2">cumple 9 AÑOS</p>
+    <div className="hero-title text-center text-white drop-shadow-lg px-4">
+      <h2>🎤👹 ¡ATENCIÓN CAZADORES! 👹🎤</h2>
+      <h1>Jasiel</h1>
+      <h3>Cumple</h3>
+      <h2>11</h2>
+      <h3>años</h3>
     </div>
   );
 }

@@ -66,6 +66,7 @@ h1, h2, h3 {
   font-family: var(--font-orbitron);
   font-weight: 900;
   color: #96d2f5;
+  font-size: 2rem;
 }
 
 @keyframes shake {
@@ -75,4 +76,46 @@ h1, h2, h3 {
 
 .animate-shake {
   animation: shake 2s ease-in-out infinite;
+}
+
+/* boton */
+.btn-mapa {
+  background-color: #c9b6e7; /* lila bebé */
+  color: white;
+  padding: 0.75rem 1.5rem; /* px-6 py-3 */
+  border-radius: 0.75rem; /* rounded-lg */
+  font-weight: 600;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: all 0.3s;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-mapa:hover {
+  background-color: #8247e7; /* lila un poco más oscuro */
+  transform: scale(1.05);
+}
+
+
+/* HeroTitle específico */
+.hero-title h1 {
+  font-size: 4rem; /* tamaño del h1 */
+  margin-bottom: 2rem; /* espacio debajo */
+}
+
+.hero-title h2 {
+  font-size: 3rem; /* tamaño del h2 */
+  margin-bottom: 2rem;
+}
+
+.hero-title h3 {
+  font-size: 2.25rem; /* tamaño del h3 */
+  margin-bottom: 2rem;
+}
+
+/* Si quieres más separación entre todos los h's */
+.hero-title h1,
+.hero-title h2,
+.hero-title h3 {
+  line-height: 1.2; /* altura de línea para mayor separación */
 }

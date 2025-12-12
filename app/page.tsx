@@ -1,50 +1,86 @@
 "use client";
+
 import { useState } from "react";
 import Image from "next/image";
-import Background from "./components/background";
+import BackgroundVideo from "./components/backgroundVideo";
+import HeroTitle from "./components/heroTitle";
+import Countdown from "./components/countdown";
+import EventDetails from "./components/eventDetails";
 import PhotoCard from "./components/photocard";
-import InviteText from "./components/inviteText";
-import MusicPlayer from "./components/musicPlayer";
-import Footer from "./components/footer";
 
-// Define aquí la imagen de la carta (puedes cambiar la ruta)
 import sobreImage from "../public/images/sobre.png";
 
 export default function Home() {
   const [abierto, setAbierto] = useState(false);
 
- return (
-    <div className={`w-screen h-screen flex items-center justify-center ${
-      abierto ? "bg-transparent" : "bg-purple-100"
-    }`}>
+  return (
+    <div className={`w-screen ${abierto ? "bg-transparent" : "bg-purple-100"}`}>
       {!abierto ? (
-        // Pantalla inicial con la carta
         <div
-          className="cursor-pointer transform hover:scale-105 transition-transform"
+          className="h-screen flex items-center justify-center cursor-pointer transform hover:scale-105 transition-transform"
           onClick={() => setAbierto(true)}
         >
-          <Image src={sobreImage} alt="Abrir Invitación" width={200} height={200} className="animate-shake"/>
+          <Image
+            src={sobreImage}
+            alt="Abrir Invitación"
+            width={200}
+            height={200}
+            className="animate-shake"
+          />
         </div>
       ) : (
-        <div className="relative flex flex-col min-h-screen w-full">
-          {/* Fondo fijo detrás de todo */}
-          <Background />
+        <>
+          {/* Sección de video */}
+          <section className="relative w-full h-screen">
+            <BackgroundVideo />
 
-          {/* CONTENIDO */}
-          <div className="relative z-10 flex flex-col items-center w-full">
-            <section className="flex flex-col items-center justify-center h-screen px-4 text-center">
-              <InviteText />
-              <MusicPlayer />
-            </section>
+            {/* InviteText delante del video */}
+            <div className="absolute inset-0 z-10 flex items-center justify-center">
+              <HeroTitle />
+            </div>
+          </section>
 
-            <section className="flex flex-col md:flex-row items-center justify-center gap-8 py-20 px-4">
-              <PhotoCard image="/images/jasiel1.jpeg" borderColor="#aa48b8" />
-              <PhotoCard image="/images/jasiel2.jpeg" borderColor="#7f53b3" />
-            </section>
+          {/* Sección de fotos */}
+          <section className="w-full flex flex-col md:flex-row items-center justify-center gap-4 py-12 px-4 md:px-16 bg-purple-200/40">
+            {/* Foto izquierda */}
+            <PhotoCard
+              image="/images/jasiel1.jpeg"
+              borderColor="#aa48b8"
+            />
 
-            <Footer />
-          </div>
-        </div>
+            {/* Texto central */}
+            <div className="flex-1 text-center px-4 max-w-lg mx-auto">
+              <h2 className="text-2xl md:text-4xl font-bold text-purple-800">
+                ¡Prepárate para la diversión!
+              </h2>
+              <p className="text-lg opacity-90 leading-loose">
+                Se ha detectado una alta concentración de ritmo y diversión. ¡Tenemos una nueva misión clasificada!
+              </p>
+              <p className="leading-loose">¡Prepárate para una fiesta llena de magia, música y estrellas!</p>
+              <p className="text-lg opacity-90 leading-loose">
+                La animación y el show estarán oficialmente a cargo de: 
+                ✨ <span className="font-semibold">CRAZY PARTY</span> ✨ 
+              </p>
+              <p>(¡Así que la diversión extrema está garantizada! 😉)</p>
+            </div>
+
+            {/* Foto derecha */}
+            <PhotoCard
+              image="/images/jasiel2.jpeg"
+              borderColor="#7f53b3"
+            />
+          </section>
+
+          {/* Sección de Countdown justo debajo */}
+          <section className="w-full bg-white">
+            <Countdown />
+          </section>
+
+          {/* Sección EventDetails */}
+          <section className="w-full bg-purple-200/40">
+            <EventDetails />
+          </section>
+        </>
       )}
     </div>
   );

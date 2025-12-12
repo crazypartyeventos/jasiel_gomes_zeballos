@@ -4,15 +4,15 @@ export default function Background() {
   const stars = Array.from({ length: 35 });
 
   return (
-    <div className="fixed inset-0 -z-10 overflow-hidden">
-
+    <div className="absolute inset-0 -z-10 w-full overflow-hidden">
+      
       {/* VIDEO MOBILE */}
       <video
         autoPlay
         loop
         muted
         playsInline
-        className="w-full h-full object-cover block md:hidden"
+        className="absolute top-0 left-0 w-full h-auto object-cover object-top md:hidden"
       >
         <source src="/video/kpop-demon-hunters.720x1280.mp4" type="video/mp4" />
       </video>
@@ -23,7 +23,7 @@ export default function Background() {
         loop
         muted
         playsInline
-        className="w-full h-full object-cover hidden md:block"
+        className="absolute top-0 left-0 w-full h-auto object-cover object-top hidden md:block"
       >
         <source src="/video/kpop-demon-hunters.mp4" type="video/mp4" />
       </video>
