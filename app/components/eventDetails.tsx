@@ -29,7 +29,7 @@ export default function EventDetails() {
           Salón San Antonio
         </p>
         <p className="text-sm text-gray-700 mb-6 text-center">
-          Calle, Zona Numero ...
+          Calle, Numero ...
         </p>
 
         <a

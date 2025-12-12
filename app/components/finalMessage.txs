@@ -1,8 +1,0 @@
-export default function FinalMessage() {
-  return (
-    <div className="bg-pink-200 text-center py-6 px-4">
-      <p>MARÍA FERNANDA</p>
-      <p>TE ESPERO, NO FALTES</p>
-    </div>
-  );
-}

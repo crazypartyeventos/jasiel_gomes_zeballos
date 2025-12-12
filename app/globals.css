@@ -119,3 +119,37 @@ h1, h2, h3 {
 .hero-title h3 {
   line-height: 1.2; /* altura de línea para mayor separación */
 }
+
+.final-message-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* ocupa toda la altura de la pantalla */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.final-message-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* para que llene el contenedor */
+  z-index: 0;
+}
+
+.final-message-text {
+  position: relative;
+  z-index: 10; /* encima del video */
+  color: #380e69; /* violeta */
+  font-size: 3rem; /* letra grande */
+  font-weight: bold;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.5); /* sombra para destacar sobre el video */
+}
+
+.final-message-text p {
+  margin: 0.5rem 0;
+}
