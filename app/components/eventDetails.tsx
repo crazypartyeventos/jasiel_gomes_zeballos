@@ -13,7 +13,6 @@ export default function EventDetails() {
         <br />
         <div className="w-full max-w-md flex justify-center mb-6 px-4">
           <Image
-            key="/images/viloco2.jpg"
             src="/images/viloco2.jpg"
             alt="Foto del lugar"
             width={500}

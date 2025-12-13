@@ -57,7 +57,7 @@ export default function Countdown() {
       <div className="flex flex-col items-center space-y-4 mt-8">
         <p className="text-sm md:text-base leading-relaxed">Estamos por comenzar la diversión</p>
         <img 
-          src="/images/kpop1.gif" 
+          src="./images/kpop1.gif" 
           alt="Celebración" 
           className="w-40 md:w-60 rounded-xl shadow-lg"
         />

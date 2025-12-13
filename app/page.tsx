@@ -46,7 +46,7 @@ export default function Home() {
 
           {/* Sección de fotos */}
           <section className="w-full flex flex-col md:flex-row items-center justify-center gap-4 py-12 px-8 md:px-16 bg-purple-200/40">
-            <PhotoCard image="/images/jasiel1.jpeg" borderColor="#aa48b8" />
+            <PhotoCard image="./images/jasiel1.jpeg" borderColor="#aa48b8" />
             <div className="flex-1 text-center px-4 max-w-lg mx-auto">
               <h2 className="text-2xl md:text-4xl font-bold text-purple-800">
                 ¡Prepárate para la diversión!
@@ -62,7 +62,7 @@ export default function Home() {
               </p>
               <p>(¡Así que la diversión extrema está garantizada! 😉)</p>
             </div>
-            <PhotoCard image="/images/jasiel2.jpeg" borderColor="#7f53b3" />
+            <PhotoCard image="./images/jasiel2.jpeg" borderColor="#7f53b3" />
           </section>
 
           {/* Sección Countdown */}

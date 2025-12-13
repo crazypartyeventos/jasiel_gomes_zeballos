@@ -12,7 +12,7 @@ export default function Background() {
         playsInline
         className="w-full h-full object-cover block md:hidden"
       >
-        <source src="/video/kpop-demon-hunters.720x1280.mp4" type="video/mp4" />
+        <source src="./video/kpop-demon-hunters.720x1280.mp4" type="video/mp4" />
       </video>
 
       {/* VIDEO DESKTOP */}
@@ -23,7 +23,7 @@ export default function Background() {
         playsInline
         className="w-full h-full object-cover hidden md:block"
       >
-        <source src="/video/kpop-demon-hunters.mp4" type="video/mp4" />
+        <source src="./video/kpop-demon-hunters.mp4" type="video/mp4" />
       </video>
 
       {/* ✨ Estrellas animadas */}
