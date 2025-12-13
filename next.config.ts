@@ -1,8 +1,8 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  output: 'export', // Habilita exportación a HTML estático
-  reactCompiler: true, // tu opción anterior
+  output: 'export',
+  basePath: process.env.PAGES_BASE_PATH,
 };
 
 export default nextConfig;
