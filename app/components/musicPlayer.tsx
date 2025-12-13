@@ -54,7 +54,7 @@ export default function MusicPlayer({ playOnStart = false }: MusicPlayerProps) {
         )}
       </button>
 
-      <audio ref={audioRef} src="./music/dorada.mp3" loop />
+      <audio ref={audioRef} src="/music/dorada.mp3" loop />
     </div>
   );
 }

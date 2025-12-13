@@ -3,21 +3,16 @@ import Image from "next/image";
 export default function EventDetails() {
   return (
     <div className="w-full bg-purple-200/40 py-12">
-      {/* Contenedor interno centrado solo para el contenido */}
       <div className="flex flex-col items-center">
-        <br />
-        <br />
         <p className="text-lg font-semibold mb-6 text-purple-900 text-center">
           La fiesta será en:
         </p>
-        <br />
+
         <div className="w-full max-w-md flex justify-center mb-6 px-4">
-          <Image
-            src="/images/viloco2.jpg"
+          <img
+            src="./images/viloco2.jpg"
             alt="Foto del lugar"
-            width={500}
-            height={550}
-            className="rounded-2xl shadow-md object-cover"
+            className="rounded-2xl shadow-md object-cover w-full h-auto"
           />
         </div>
 
@@ -37,7 +32,7 @@ export default function EventDetails() {
           rel="noopener noreferrer"
           className="btn-mapa"
         >
-          📍Ver mapa
+          Ver mapa
         </a>
       </div>
       <br />
