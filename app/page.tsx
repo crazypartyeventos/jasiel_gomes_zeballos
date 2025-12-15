@@ -2,11 +2,12 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import ScrollIndicator from "./components/scrollIndicator";
 import BackgroundVideo from "./components/backgroundVideo";
 import HeroTitle from "./components/heroTitle";
 import Countdown from "./components/countdown";
 import EventDetails from "./components/eventDetails";
-import PhotoCard from "./components/photocard";
+import PhotoSection from "./components/photoSection";
 import MusicPlayer from "./components/musicPlayer";
 import FinalMessage from "./components/finalMessage";
 import Footer from "./components/footer";
@@ -37,33 +38,19 @@ export default function Home() {
           <MusicPlayer playOnStart={true} />
 
           {/* Sección de video */}
-          <section className="relative w-full h-screen">
-            <BackgroundVideo />
-            <div className="absolute inset-0 z-10 flex items-center justify-center">
-              <HeroTitle />
-            </div>
-          </section>
+          <section className="relative w-full min-h-screen overflow-hidden">
+  <BackgroundVideo />
+  <div className="absolute inset-0 z-10 flex items-center justify-center">
+    <HeroTitle />
+  </div>
+</section>
+
+
+          {/* Flecha de scroll */}
+          <ScrollIndicator />
 
           {/* Sección de fotos */}
-          <section className="w-full flex flex-col md:flex-row items-center justify-center gap-4 py-12 px-8 md:px-16 bg-purple-200/40">
-            <PhotoCard image="./images/jasiel1.jpeg" borderColor="#aa48b8" />
-            <div className="flex-1 text-center px-4 max-w-lg mx-auto">
-              <h2 className="text-2xl md:text-4xl font-bold text-purple-800">
-                ¡Prepárate para la diversión!
-              </h2>
-              <p className="text-lg opacity-90 leading-loose">
-                Se ha detectado una alta concentración de ritmo y diversión.
-              </p>
-              <p> ¡Tenemos una nueva misión clasificada!</p>
-              <p className="leading-loose">¡Prepárate para una fiesta llena de magia, música y estrellas!</p>
-              <p className="text-lg opacity-90 leading-loose">
-                La animación y el show estarán oficialmente a cargo de: 
-                ✨ <span className="font-semibold">CRAZY PARTY</span> ✨ 
-              </p>
-              <p>(¡Así que la diversión extrema está garantizada! 😉)</p>
-            </div>
-            <PhotoCard image="./images/jasiel2.jpeg" borderColor="#7f53b3" />
-          </section>
+          <PhotoSection />
 
           {/* Sección Countdown */}
           <section className="w-full bg-white">
@@ -71,7 +58,7 @@ export default function Home() {
           </section>
 
           {/* Sección EventDetails */}
-          <section className="w-full bg-purple-200/40">
+          <section className="w-full bg-[#e536bf]/60">
             <EventDetails />
           </section>
 

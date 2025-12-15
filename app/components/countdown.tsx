@@ -45,7 +45,7 @@ export default function Countdown() {
         </div>
       </div>
       <br/>
-      <p className="text-sm md:text-base mt-6 mb-4 leading-relaxed">Faltan:</p>
+      <p className="text-sm md:text-base mt-6 mb-4 leading-loose">Faltan:</p>
 
       <div className="flex justify-center gap-4 flex-wrap">
         {timeBox(timeLeft.days, "días")}
@@ -54,8 +54,9 @@ export default function Countdown() {
         {timeBox(timeLeft.seconds, "seg")}
       </div>
 
+<br />
       <div className="flex flex-col items-center space-y-4 mt-8">
-        <p className="text-sm md:text-base leading-relaxed">Estamos por comenzar la diversión</p>
+        <p className="text-sm md:text-base leading-loose">Estamos por comenzar la diversión</p>
         <img 
           src="./images/kpop1.gif" 
           alt="Celebración" 

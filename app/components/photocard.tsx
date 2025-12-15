@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 export default function PhotoCard({
   image,
   borderColor,
-  width = "288px",
+  width = "250px",
   height = "500px",
 }: {
   image: string;

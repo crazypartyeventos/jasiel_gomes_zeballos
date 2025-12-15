@@ -30,7 +30,7 @@ export default function FinalMessage() {
         <p className="final-message-text">
           JASIEL
         </p>
-        <p className="text-2xl md:text-4xl font-semibold text-violet-200">
+        <p className="text-2xl md:text-4xl font-semibold text-white leading-loose">
           TE ESPERA, NO FALTES
         </p>
       </div>
