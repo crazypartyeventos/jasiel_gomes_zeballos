@@ -1,13 +1,17 @@
 export default function HeroTitle() {
   return (
     <div className="hero-title text-center text-white px-4">
-      <h2 className="text-center text-white" style={{ textShadow: "2px 2px 4px #aa48b8" }}>
+      <p
+        className="text-center text-white text-2xl sm:text-3xl"
+        style={{ color: "#9b34b4ff", textShadow: "2px 2px 4px #ffffffff" }}
+      >
         🎤👹 <span className="block sm:inline">¡ATENCIÓN CAZADORES!</span> 👹🎤
-      </h2>
-      <h1 style={{ textShadow: "2px 2px 4px #aa48b8" }}>Jasiel</h1>
-      <h3 style={{ textShadow: "2px 2px 4px #aa48b8" }}>Cumple</h3>
-      <h2 style={{ textShadow: "2px 2px 4px #aa48b8" }}>11</h2>
-      <h3 style={{ textShadow: "2px 2px 4px #aa48b8" }}>años</h3>
+      </p>
+      <br />
+      <h1 style={{ color: "#9b34b4ff", textShadow: "2px 2px 4px #ffffffff" }}>Jasiel</h1>
+      <h3 style={{ color: "#9b34b4ff", textShadow: "2px 2px 4px #ffffffff" }}>Cumple</h3>
+      <h2 style={{ color: "#9b34b4ff", textShadow: "2px 2px 4px #ffffffff" }}>11</h2>
+      <h3 style={{ color: "#9b34b4ff", textShadow: "2px 2px 4px #ffffffff" }}>años</h3>
     </div>
   );
 }

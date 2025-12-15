@@ -5,12 +5,12 @@ import { SiTiktok } from "react-icons/si";
 
 export default function Footer() {
   const particles = Array.from({ length: 50 });
-  const colors = ["#1624e6ff", "#ff0000", "#fae844ff", "#911fb4ff"];
+  const colors = ["#1624e6ff", "#ff0000", "#ffffffff", "#911fb4ff"];
 
   return (
     <footer
       className="w-full py-16 flex flex-col items-center gap-8 text-white relative overflow-hidden"
-      style={{ background: "linear-gradient(to right, #ffeb3b, #1a0ec7)" }}
+      style={{ background: "#ffeb3b" }}
     >
       {/* Puntitos animados de fiesta con colores */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -35,8 +35,8 @@ export default function Footer() {
           <p
             className="text-2xl md:text-3xl font-black text-center tracking-wide"
             style={{
-              color: "#ffeb3b",
-              textShadow: "2px 2px 0px #363afaff",
+              color: "#363afaff",
+              textShadow: "2px 2px 0px #ffffffff",
             }}
           >
             CRAZY PARTY EVENTOS
@@ -51,25 +51,25 @@ export default function Footer() {
           <SiTiktok className="w-6 h-6" />
         </SocialButton>
 
-        <SocialButton href="https://www.facebook.com/profile.php?id=61572201140747" color="text-blue-600 group-hover:text-blue-400">
+        <SocialButton href="https://www.facebook.com/profile.php?id=61572201140747" color="text-black group-hover:text-blue-400">
           <FaFacebookF className="w-6 h-6" />
         </SocialButton>
 
-        <SocialButton href="https://www.instagram.com/crazyparty.lp" color="text-pink-600 group-hover:text-purple-500">
+        <SocialButton href="https://www.instagram.com/crazyparty.lp" color="text-black group-hover:text-purple-500">
           <FaInstagram className="w-7 h-7" />
         </SocialButton>
 
-        <SocialButton href="https://api.whatsapp.com/send/?phone=59162807695" color="text-green-500 group-hover:text-green-400">
+        <SocialButton href="https://api.whatsapp.com/send/?phone=59162807695" color="text-black group-hover:text-green-400">
           <FaWhatsapp className="w-7 h-7" />
         </SocialButton>
 
-        <SocialButton href="mailto:crazypartyeventos.lp@gmail.com" color="text-yellow-500 group-hover:text-yellow-400">
+        <SocialButton href="mailto:crazypartyeventos.lp@gmail.com" color="text-black group-hover:text-yellow-400">
           <FaEnvelope className="w-6 h-6" />
         </SocialButton>
       </div>
 
       {/* Derechos */}
-      <p className="text-sm md:text-base font-semibold drop-shadow-md bg-black/10 px-4 py-1 rounded-full z-10">
+      <p className="text-black text-sm md:text-base font-semibold drop-shadow-md bg-black/10 px-4 py-1 rounded-full z-10">
         &copy; 2025, TsukiNekoDev. Todos los derechos reservados.
       </p>
       <p>.</p>
