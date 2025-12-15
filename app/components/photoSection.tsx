@@ -34,6 +34,7 @@ export default function PhotoSection() {
         <div className="flex-1 text-center px-6">
             <div className="flex-1 text-center px-6">
               <div className="bg-white/20 backdrop-blur-md rounded-xl p-6 md:p-10 shadow-lg">
+              <p>.</p>
                 <h2 className="text-2xl md:text-4xl font-extrabold text-purple-800">
                   ¡Prepárate para la diversión!
                 </h2>
@@ -48,11 +49,12 @@ export default function PhotoSection() {
                 </p>
                 <p className="text-lg opacity-90 leading-loose text-white">
                   La animación y el show estarán oficialmente a cargo de:
-                  <span className="font-extrabold text-blue-800"> CRAZY PARTY </span>
                 </p>
+                <p><span className="font-extrabold text-blue-800"> ✨ CRAZY PARTY ✨ </span></p>
                 <p className="text-white opacity-80 mt-4">
-                  (¡Así que la diversión extrema está garantizada!)
+                  (¡Así que la diversión extrema está garantizada! 😉)
                 </p>
+                <p>.</p>
               </div>
             </div>
         </div>
