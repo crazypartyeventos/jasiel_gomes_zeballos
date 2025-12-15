@@ -50,7 +50,7 @@ export default function MusicPlayer({ playOnStart = false }: { playOnStart?: boo
       {/* 👇 Aquí construimos la ruta manualmente */}
       <audio 
         ref={audioRef} 
-        src={`${basePath}/music/Dorada.mp3`} 
+        src={`${basePath}/music/INV-DORADA.mp3`} 
         loop
       />
     </div>
