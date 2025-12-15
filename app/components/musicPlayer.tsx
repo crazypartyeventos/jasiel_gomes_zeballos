@@ -33,7 +33,7 @@ export default function MusicPlayer({ playOnStart = false }: { playOnStart?: boo
     <div className="fixed bottom-6 right-6 z-[1000]">
       <button
         onClick={togglePlay}
-        className="w-20 h-20 bg-[#c9b6e7]/70 hover:bg-[#c9b6e7]/100 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300"
+        className="w-20 h-20 bg-[#8247e7]/70 hover:bg-[#c9b6e7]/100 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300"
       >
         {playing ? (
           <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -51,7 +51,7 @@ export default function MusicPlayer({ playOnStart = false }: { playOnStart?: boo
       <audio 
         ref={audioRef} 
         src={`${basePath}/music/Dorada.mp3`} 
-        loop 
+        loop
       />
     </div>
   );
