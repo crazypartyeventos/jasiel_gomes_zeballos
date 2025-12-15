@@ -28,7 +28,7 @@ export default function EventDetails() {
         <br />
 
         <a
-          href="https://maps.app.goo.gl/qDaQ984N6BKzuhjK8"
+          href="https://maps.app.goo.gl/9Z79Pcn5uw6fqi4A8"
           target="_blank"
           rel="noopener noreferrer"
           className="btn-mapa"
